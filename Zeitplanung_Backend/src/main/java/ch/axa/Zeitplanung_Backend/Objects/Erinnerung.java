@@ -16,14 +16,14 @@ public class Erinnerung {
     @ManyToOne()
     @JoinColumn(name = "termin_idfs",
                 referencedColumnName = "termin_id")
-    private int termin_idfs;
+    private Termin termin;
 
     public Erinnerung() {
     }
 
-    public Erinnerung(String wann, int termin_idfs) {
+    public Erinnerung(String wann, Termin termin) {
         this.wann = wann;
-        this.termin_idfs = termin_idfs;
+        this.termin = termin;
     }
 
     public int getId() {
@@ -42,11 +42,11 @@ public class Erinnerung {
         this.wann = wann;
     }
 
-    public int getTermin_idfs() {
-        return termin_idfs;
+    public Termin getTermin() {
+        return termin;
     }
 
-    public void setTermin_idfs(int termin_idfs) {
-        this.termin_idfs = termin_idfs;
+    public void setTermin(Termin termin) {
+        this.termin = termin;
     }
 }
